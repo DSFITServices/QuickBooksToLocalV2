@@ -71,6 +71,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="QuickbooksDAL\QBcustomers.cs" />
+    <Compile Include="QuickbooksDAL\QBcustomerTypes.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -124,7 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="QuickbooksDAL\" />
     <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>

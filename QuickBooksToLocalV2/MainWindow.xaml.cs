@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using QuickBooksToLocalV2.QuickbooksDAL;
 
 namespace QuickBooksToLocalV2
 {
@@ -23,6 +24,12 @@ namespace QuickBooksToLocalV2
         public MainWindow()
         {
             InitializeComponent();
+
+            //QBcustomerTypes qbcusttype = new QBcustomerTypes();
+            //qbcusttype.DbGetCustomerTypes();
+
+            QBcustomers qbCustomers = new QBcustomers();
+            qbCustomers.DbGetCustomers();
         }
     }
 }
