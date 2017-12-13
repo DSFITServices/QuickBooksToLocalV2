@@ -17,7 +17,7 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
 
         public void DbGetCustomerTypes()
         {
-            qbEntities qbe = new qbEntities();
+            var qbe = new synncquickbooksEntities();
             var CustomerTypes = new List<customertype>();
 
             try

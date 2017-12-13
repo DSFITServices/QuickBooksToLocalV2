@@ -18,7 +18,7 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
 
         public void DbGetCustomers()
         {
-            qbEntities qbe = new qbEntities();
+            var qbe = new synncquickbooksEntities();
             var Customers = new List<customer>();
 
             try
