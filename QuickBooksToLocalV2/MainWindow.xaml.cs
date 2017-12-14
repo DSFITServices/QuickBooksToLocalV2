@@ -31,7 +31,8 @@ namespace QuickBooksToLocalV2
             //var qbCustomers = new QBcustomers();
             //qbCustomers.DbGetCustomers();
 
-
+            var qbInvoices = new QBinvoices();
+            qbInvoices.DbGetInvoices();
 
 
 
