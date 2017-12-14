@@ -28,8 +28,18 @@ namespace QuickBooksToLocalV2
             //var qbcusttype = new QBcustomerTypes();
             //qbcusttype.DbGetCustomerTypes();
 
-            var qbCustomers = new QBcustomers();
-            qbCustomers.DbGetCustomers();
+            //var qbCustomers = new QBcustomers();
+            //qbCustomers.DbGetCustomers();
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

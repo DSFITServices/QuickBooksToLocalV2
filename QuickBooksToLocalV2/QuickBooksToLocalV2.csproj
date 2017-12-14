@@ -71,8 +71,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\customer.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\customertype.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\invoice.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\invoicelineitem.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QuickbooksDAL\CommonDAL\QBCommon.cs" />
     <Compile Include="QuickbooksDAL\QBcustomers.cs" />
     <Compile Include="QuickbooksDAL\QBcustomerTypes.cs" />
+    <Compile Include="Interfaces\IConnect.cs" />
+    <Compile Include="QuickbooksDAL\QBinvoicelineitem.cs" />
+    <Compile Include="QuickbooksDAL\QBinvoices.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +135,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\qbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>qbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\qbModel.edmx.diagram">
+      <DependentUpon>qbModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,12 +164,21 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Templates\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\qbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>qbModel.edmx</DependentUpon>
+      <LastGenOutput>qbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\qbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>qbModel.edmx</DependentUpon>
+      <LastGenOutput>qbModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
