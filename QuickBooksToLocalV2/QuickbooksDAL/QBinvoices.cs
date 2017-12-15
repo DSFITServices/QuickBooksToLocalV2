@@ -177,34 +177,34 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
                                 Invoice.BillingNote = invoiceRet.BillAddress.Note.GetValue();
                             }
                         }
-                        //////if (invoiceRet.BillAddressBlock != null)
-                        //////{
-                        //////    //Get value of Addr1
-                        //////    if (invoiceRet.BillAddressBlock.Addr1 != null)
-                        //////    {
-                        //////        Invoice.Addr133 = invoiceRet.BillAddressBlock.Addr1.GetValue();
-                        //////    }
-                        //////    //Get value of Addr2
-                        //////    if (invoiceRet.BillAddressBlock.Addr2 != null)
-                        //////    {
-                        //////        Invoice.Addr234 = invoiceRet.BillAddressBlock.Addr2.GetValue();
-                        //////    }
-                        //////    //Get value of Addr3
-                        //////    if (invoiceRet.BillAddressBlock.Addr3 != null)
-                        //////    {
-                        //////        Invoice.Addr335 = invoiceRet.BillAddressBlock.Addr3.GetValue();
-                        //////    }
-                        //////    //Get value of Addr4
-                        //////    if (invoiceRet.BillAddressBlock.Addr4 != null)
-                        //////    {
-                        //////        Invoice.Addr436 = invoiceRet.BillAddressBlock.Addr4.GetValue();
-                        //////    }
-                        //////    //Get value of Addr5
-                        //////    if (invoiceRet.BillAddressBlock.Addr5 != null)
-                        //////    {
-                        //////        Invoice.Addr537 = invoiceRet.BillAddressBlock.Addr5.GetValue();
-                        //////    }
-                        //////}
+                        ////////if (invoiceRet.BillAddressBlock != null)
+                        ////////{
+                        ////////    //Get value of Addr1
+                        ////////    if (invoiceRet.BillAddressBlock.Addr1 != null)
+                        ////////    {
+                        ////////        Invoice.Addr133 = invoiceRet.BillAddressBlock.Addr1.GetValue();
+                        ////////    }
+                        ////////    //Get value of Addr2
+                        ////////    if (invoiceRet.BillAddressBlock.Addr2 != null)
+                        ////////    {
+                        ////////        Invoice.Addr234 = invoiceRet.BillAddressBlock.Addr2.GetValue();
+                        ////////    }
+                        ////////    //Get value of Addr3
+                        ////////    if (invoiceRet.BillAddressBlock.Addr3 != null)
+                        ////////    {
+                        ////////        Invoice.Addr335 = invoiceRet.BillAddressBlock.Addr3.GetValue();
+                        ////////    }
+                        ////////    //Get value of Addr4
+                        ////////    if (invoiceRet.BillAddressBlock.Addr4 != null)
+                        ////////    {
+                        ////////        Invoice.Addr436 = invoiceRet.BillAddressBlock.Addr4.GetValue();
+                        ////////    }
+                        ////////    //Get value of Addr5
+                        ////////    if (invoiceRet.BillAddressBlock.Addr5 != null)
+                        ////////    {
+                        ////////        Invoice.Addr537 = invoiceRet.BillAddressBlock.Addr5.GetValue();
+                        ////////    }
+                        ////////}
                         if (invoiceRet.ShipAddress != null)
                         {
                             //Get value of Addr1
@@ -258,44 +258,44 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
                                 Invoice.ShippingNote = invoiceRet.ShipAddress.Note.GetValue();
                             }
                         }
-                        ////////////if (invoiceRet.ShipAddressBlock != null)
-                        ////////////{
-                        ////////////    //Get value of Addr1
-                        ////////////    if (invoiceRet.ShipAddressBlock.Addr1 != null)
-                        ////////////    {
-                        ////////////        Invoice.Addr148 = invoiceRet.ShipAddressBlock.Addr1.GetValue();
-                        ////////////    }
-                        ////////////    //Get value of Addr2
-                        ////////////    if (invoiceRet.ShipAddressBlock.Addr2 != null)
-                        ////////////    {
-                        ////////////        Invoice.Addr249 = invoiceRet.ShipAddressBlock.Addr2.GetValue();
-                        ////////////    }
-                        ////////////    //Get value of Addr3
-                        ////////////    if (invoiceRet.ShipAddressBlock.Addr3 != null)
-                        ////////////    {
-                        ////////////        Invoice.Addr350 = invoiceRet.ShipAddressBlock.Addr3.GetValue();
-                        ////////////    }
-                        ////////////    //Get value of Addr4
-                        ////////////    if (invoiceRet.ShipAddressBlock.Addr4 != null)
-                        ////////////    {
-                        ////////////        Invoice.Addr451 = invoiceRet.ShipAddressBlock.Addr4.GetValue();
-                        ////////////    }
-                        ////////////    //Get value of Addr5
-                        ////////////    if (invoiceRet.ShipAddressBlock.Addr5 != null)
-                        ////////////    {
-                        ////////////        Invoice.Addr552 = invoiceRet.ShipAddressBlock.Addr5.GetValue();
-                        ////////////    }
-                        ////////////}
+                        //////////////if (invoiceRet.ShipAddressBlock != null)
+                        //////////////{
+                        //////////////    //Get value of Addr1
+                        //////////////    if (invoiceRet.ShipAddressBlock.Addr1 != null)
+                        //////////////    {
+                        //////////////        Invoice.Addr148 = invoiceRet.ShipAddressBlock.Addr1.GetValue();
+                        //////////////    }
+                        //////////////    //Get value of Addr2
+                        //////////////    if (invoiceRet.ShipAddressBlock.Addr2 != null)
+                        //////////////    {
+                        //////////////        Invoice.Addr249 = invoiceRet.ShipAddressBlock.Addr2.GetValue();
+                        //////////////    }
+                        //////////////    //Get value of Addr3
+                        //////////////    if (invoiceRet.ShipAddressBlock.Addr3 != null)
+                        //////////////    {
+                        //////////////        Invoice.Addr350 = invoiceRet.ShipAddressBlock.Addr3.GetValue();
+                        //////////////    }
+                        //////////////    //Get value of Addr4
+                        //////////////    if (invoiceRet.ShipAddressBlock.Addr4 != null)
+                        //////////////    {
+                        //////////////        Invoice.Addr451 = invoiceRet.ShipAddressBlock.Addr4.GetValue();
+                        //////////////    }
+                        //////////////    //Get value of Addr5
+                        //////////////    if (invoiceRet.ShipAddressBlock.Addr5 != null)
+                        //////////////    {
+                        //////////////        Invoice.Addr552 = invoiceRet.ShipAddressBlock.Addr5.GetValue();
+                        //////////////    }
+                        //////////////}
                         //Get value of IsPending
                         if (invoiceRet.IsPending != null)
                         {
                             Invoice.IsPending = invoiceRet.IsPending.GetValue();
                         }
                         //Get value of IsFinanceCharge
-                        if (invoiceRet.IsFinanceCharge != null)
-                        {
-                            Invoice.IsFinanceCharge = invoiceRet.IsFinanceCharge.ToString();
-                        }
+                        //////if (invoiceRet.IsFinanceCharge != null)
+                        //////{
+                        //////    Invoice.IsFinanceCharge = invoiceRet.IsFinanceCharge.ToString();
+                        //////}
                         //Get value of PONumber
                         if (invoiceRet.PONumber != null)
                         {
