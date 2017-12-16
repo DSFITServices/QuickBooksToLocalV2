@@ -12,17 +12,9 @@ namespace QuickBooksToLocalV2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class customertype
+    public partial class addresstype
     {
         public int ID { get; set; }
-        public string ListID { get; set; }
         public string Name { get; set; }
-        public string FullName { get; set; }
-        public string ParentName { get; set; }
-        public string ParentId { get; set; }
-        public Nullable<bool> IsActive { get; set; }
-        public Nullable<System.DateTime> TimeCreated { get; set; }
-        public Nullable<System.DateTime> TimeModified { get; set; }
-        public string EditSequence { get; set; }
     }
 }

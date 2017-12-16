@@ -14,7 +14,14 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class customer
     {
-        public string ID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public customer()
+        {
+            this.invoices = new HashSet<invoice>();
+        }
+    
+        public int ID { get; set; }
+        public string ListID { get; set; }
         public string PSID { get; set; }
         public string AmazID { get; set; }
         public string EbayID { get; set; }
@@ -30,7 +37,6 @@ namespace QuickBooksToLocalV2.Models
         public Nullable<double> Balance { get; set; }
         public Nullable<double> CustomerBalance { get; set; }
         public string Contact { get; set; }
-        public string Type { get; set; }
         public string TypeId { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
@@ -39,10 +45,8 @@ namespace QuickBooksToLocalV2.Models
         public string Email { get; set; }
         public string Cc { get; set; }
         public string AdditionalContactInfo { get; set; }
-        public string ClassName { get; set; }
         public string ClassId { get; set; }
         public string Notes { get; set; }
-        public string ParentName { get; set; }
         public string ParentId { get; set; }
         public Nullable<int> Sublevel { get; set; }
         public string JobStatus { get; set; }
@@ -50,7 +54,6 @@ namespace QuickBooksToLocalV2.Models
         public Nullable<System.DateTime> JobProjectedEndDate { get; set; }
         public Nullable<System.DateTime> JobEndDate { get; set; }
         public string JobDescription { get; set; }
-        public string JobType { get; set; }
         public string JobTypeId { get; set; }
         public string CreditCardAddress { get; set; }
         public Nullable<int> CreditCardExpMonth { get; set; }
@@ -59,44 +62,17 @@ namespace QuickBooksToLocalV2.Models
         public string CreditCardNumber { get; set; }
         public string CreditCardPostalCode { get; set; }
         public Nullable<double> CreditLimit { get; set; }
-        public string BillingAddress { get; set; }
-        public string BillingLine1 { get; set; }
-        public string BillingLine2 { get; set; }
-        public string BillingLine3 { get; set; }
-        public string BillingLine4 { get; set; }
-        public string BillingLine5 { get; set; }
-        public string BillingCity { get; set; }
-        public string BillingState { get; set; }
-        public string BillingPostalCode { get; set; }
-        public string BillingCountry { get; set; }
-        public string BillingNote { get; set; }
-        public string ShippingAddress { get; set; }
-        public string ShippingLine1 { get; set; }
-        public string ShippingLine2 { get; set; }
-        public string ShippingLine3 { get; set; }
-        public string ShippingLine4 { get; set; }
-        public string ShippingLine5 { get; set; }
-        public string ShippingCity { get; set; }
-        public string ShippingState { get; set; }
-        public string ShippingPostalCode { get; set; }
-        public string ShippingCountry { get; set; }
-        public string ShippingNote { get; set; }
+        public string BillingAddressID { get; set; }
+        public string ShippingAddressID { get; set; }
         public string ResaleNumber { get; set; }
-        public string SalesRep { get; set; }
         public string SalesRepId { get; set; }
-        public string Terms { get; set; }
         public string TermsId { get; set; }
-        public string CurrencyName { get; set; }
         public string CurrencyId { get; set; }
-        public string TaxCode { get; set; }
         public string TaxCodeId { get; set; }
-        public string TaxItem { get; set; }
         public string TaxItemId { get; set; }
         public string SalesTaxCountry { get; set; }
-        public string PriceLevel { get; set; }
         public string PriceLevelId { get; set; }
         public string PreferredDeliveryMethod { get; set; }
-        public string PreferredPaymentMethodName { get; set; }
         public string PreferredPaymentMethodId { get; set; }
         public string PrintAs { get; set; }
         public Nullable<bool> IsActive { get; set; }
@@ -105,7 +81,10 @@ namespace QuickBooksToLocalV2.Models
         public Nullable<System.DateTime> TimeModified { get; set; }
         public Nullable<System.DateTime> TimeCreated { get; set; }
         public string Barcode { get; set; }
+        public int customertypes_ID { get; set; }
     
         public virtual customertype customertype { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<invoice> invoices { get; set; }
     }
 }

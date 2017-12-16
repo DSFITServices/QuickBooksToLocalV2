@@ -25,6 +25,8 @@ namespace QuickBooksToLocalV2.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<address> addresses { get; set; }
+        public virtual DbSet<addresstype> addresstypes { get; set; }
         public virtual DbSet<customer> customers { get; set; }
         public virtual DbSet<customertype> customertypes { get; set; }
         public virtual DbSet<invoicelineitem> invoicelineitems { get; set; }

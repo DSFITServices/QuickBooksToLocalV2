@@ -14,7 +14,8 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class invoice
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
+        public string TxtID { get; set; }
         public string ReferenceNumber { get; set; }
         public Nullable<int> TxnNumber { get; set; }
         public string CustomerName { get; set; }
@@ -88,5 +89,10 @@ namespace QuickBooksToLocalV2.Models
         public string EditSequence { get; set; }
         public Nullable<System.DateTime> TimeModified { get; set; }
         public Nullable<System.DateTime> TimeCreated { get; set; }
+        public int customers_ID { get; set; }
+        public string customers_Name { get; set; }
+        public int customers_customertypes_ID { get; set; }
+    
+        public virtual customer customer { get; set; }
     }
 }

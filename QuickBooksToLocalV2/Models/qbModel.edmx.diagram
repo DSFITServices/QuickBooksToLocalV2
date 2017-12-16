@@ -4,12 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="577ae096c7b54e18b1a1672c4ecb6f90" Name="Diagram1" ZoomLevel="38">
-        <EntityTypeShape EntityType="synncquickbooksModel.customer" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="synncquickbooksModel.customertype" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
-        <AssociationConnector Association="synncquickbooksModel.fk_customertypes_customers" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="synncquickbooksModel.invoicelineitem" Width="1.5" PointX="5.375" PointY="0.75" />
-        <EntityTypeShape EntityType="synncquickbooksModel.invoice" Width="1.5" PointX="7.375" PointY="0.75" />
+      <Diagram DiagramId="4ae3f638d9ba47fca947aa3ec47ab035" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="synncquickbooksModel.address" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="synncquickbooksModel.addresstype" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="synncquickbooksModel.customer" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="synncquickbooksModel.customertype" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="synncquickbooksModel.invoicelineitem" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="synncquickbooksModel.invoice" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="synncquickbooksModel.fk_addresses_addresstype1" ManuallyRouted="false" />
+        <AssociationConnector Association="synncquickbooksModel.fk_customers_customertypes" ManuallyRouted="false" />
+        <AssociationConnector Association="synncquickbooksModel.fk_invoices_customers1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

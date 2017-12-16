@@ -25,15 +25,10 @@ namespace QuickBooksToLocalV2
         {
             InitializeComponent();
 
-            //var qbcusttype = new QBcustomerTypes();
-            //qbcusttype.DbGetCustomerTypes();
 
-            //var qbCustomers = new QBcustomers();
-            //qbCustomers.DbGetCustomers();
+            Qbcustomertype qbCtype = new Qbcustomertype();
 
-            var qbInvoices = new QBinvoices();
-            qbInvoices.DbGetInvoices();
-
+            qbCtype.dbRead(null,null);
 
 
 

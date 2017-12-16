@@ -14,7 +14,8 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class invoicelineitem
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
+        public string TxtID { get; set; }
         public string InvoiceId { get; set; }
         public string ItemLineId { get; set; }
         public string ItemName { get; set; }
@@ -43,5 +44,6 @@ namespace QuickBooksToLocalV2.Models
         public string ItemUOMSetListID { get; set; }
         public string ItemIsGetPrintItemsInGroup { get; set; }
         public Nullable<System.DateTime> TimeModified { get; set; }
+        public int invoices_ID { get; set; }
     }
 }
