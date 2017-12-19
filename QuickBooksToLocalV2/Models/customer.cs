@@ -20,8 +20,7 @@ namespace QuickBooksToLocalV2.Models
             this.invoices = new HashSet<invoice>();
         }
     
-        public int ID { get; set; }
-        public string ListID { get; set; }
+        public string ID { get; set; }
         public string PSID { get; set; }
         public string AmazID { get; set; }
         public string EbayID { get; set; }
@@ -62,8 +61,7 @@ namespace QuickBooksToLocalV2.Models
         public string CreditCardNumber { get; set; }
         public string CreditCardPostalCode { get; set; }
         public Nullable<double> CreditLimit { get; set; }
-        public string BillingAddressID { get; set; }
-        public string ShippingAddressID { get; set; }
+        public string AddressID { get; set; }
         public string ResaleNumber { get; set; }
         public string SalesRepId { get; set; }
         public string TermsId { get; set; }
@@ -81,9 +79,7 @@ namespace QuickBooksToLocalV2.Models
         public Nullable<System.DateTime> TimeModified { get; set; }
         public Nullable<System.DateTime> TimeCreated { get; set; }
         public string Barcode { get; set; }
-        public int customertypes_ID { get; set; }
     
-        public virtual customertype customertype { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<invoice> invoices { get; set; }
     }

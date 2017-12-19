@@ -14,21 +14,16 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class address
     {
-        public int ID { get; set; }
-        public string FullName { get; set; }
+        public int AddrID { get; set; }
         public string AddrLine1 { get; set; }
         public string AddrLine2 { get; set; }
         public string AddrLine3 { get; set; }
         public string AddrLine4 { get; set; }
         public string AddrLine5 { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string PostalCode { get; set; }
-        public string Country { get; set; }
-        public string Note { get; set; }
-        public int addresstype_ID { get; set; }
-        public int customers_ID { get; set; }
-    
-        public virtual addresstype addresstype { get; set; }
+        public string AddrCity { get; set; }
+        public string AddrState { get; set; }
+        public string AddrPostalCode { get; set; }
+        public string AddrCountry { get; set; }
+        public string AddrNote { get; set; }
     }
 }

@@ -27,9 +27,13 @@ namespace QuickBooksToLocalV2.Models
     
         public virtual DbSet<address> addresses { get; set; }
         public virtual DbSet<addresstype> addresstypes { get; set; }
+        public virtual DbSet<currency> currencies { get; set; }
         public virtual DbSet<customer> customers { get; set; }
         public virtual DbSet<customertype> customertypes { get; set; }
         public virtual DbSet<invoicelineitem> invoicelineitems { get; set; }
         public virtual DbSet<invoice> invoices { get; set; }
+        public virtual DbSet<salesrep> salesreps { get; set; }
+        public virtual DbSet<salestaxcode> salestaxcodes { get; set; }
+        public virtual DbSet<salestaxitem> salestaxitems { get; set; }
     }
 }

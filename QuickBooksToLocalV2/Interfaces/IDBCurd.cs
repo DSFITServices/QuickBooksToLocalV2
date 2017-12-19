@@ -13,7 +13,7 @@ namespace QuickBooksToLocalV2.Interfaces
 
         //T DbUpdate(T obj);
 
-        ObservableCollection<T> DbRead(Nullable<DateTime> startDate,  Nullable<DateTime> endDate);
+        ObservableCollection<T> DbRead();
 
         //bool DbDelete(string ID);
 

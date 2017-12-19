@@ -14,36 +14,29 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class invoicelineitem
     {
-        public int ID { get; set; }
-        public string TxtID { get; set; }
+        public string ID { get; set; }
         public string InvoiceId { get; set; }
         public string ItemLineId { get; set; }
-        public string ItemName { get; set; }
         public string ItemId { get; set; }
-        public string ItemGroup { get; set; }
         public string ItemGroupId { get; set; }
         public string ItemDescription { get; set; }
         public string ItemUnitOfMeasure { get; set; }
         public Nullable<double> ItemQuantity { get; set; }
         public Nullable<double> ItemRate { get; set; }
         public Nullable<double> ItemRatePercent { get; set; }
-        public string ItemTaxCode { get; set; }
         public string ItemTaxCodeId { get; set; }
         public Nullable<double> ItemAmount { get; set; }
-        public string ItemClass { get; set; }
         public string ItemClassId { get; set; }
         public Nullable<System.DateTime> ItemServiceDate { get; set; }
         public string ItemInventorySiteId { get; set; }
-        public string ItemInventorySiteName { get; set; }
         public string ItemSerialNumber { get; set; }
         public string ItemLotNumber { get; set; }
         public string ItemOther1 { get; set; }
         public string ItemOther2 { get; set; }
-        public string ItemCustomFields { get; set; }
-        public string ItemUOMSetFullName { get; set; }
         public string ItemUOMSetListID { get; set; }
         public string ItemIsGetPrintItemsInGroup { get; set; }
         public Nullable<System.DateTime> TimeModified { get; set; }
-        public int invoices_ID { get; set; }
+    
+        public virtual invoice invoice { get; set; }
     }
 }

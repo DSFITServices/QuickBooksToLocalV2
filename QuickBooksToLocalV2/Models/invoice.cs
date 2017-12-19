@@ -14,8 +14,13 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class invoice
     {
-        public int ID { get; set; }
-        public string TxtID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public invoice()
+        {
+            this.invoicelineitems = new HashSet<invoicelineitem>();
+        }
+    
+        public string ID { get; set; }
         public string ReferenceNumber { get; set; }
         public Nullable<int> TxnNumber { get; set; }
         public string CustomerName { get; set; }
@@ -89,10 +94,9 @@ namespace QuickBooksToLocalV2.Models
         public string EditSequence { get; set; }
         public Nullable<System.DateTime> TimeModified { get; set; }
         public Nullable<System.DateTime> TimeCreated { get; set; }
-        public int customers_ID { get; set; }
-        public string customers_Name { get; set; }
-        public int customers_customertypes_ID { get; set; }
     
         public virtual customer customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<invoicelineitem> invoicelineitems { get; set; }
     }
 }

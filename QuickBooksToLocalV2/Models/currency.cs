@@ -12,17 +12,21 @@ namespace QuickBooksToLocalV2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class customertype
+    public partial class currency
     {
-        public string ID { get; set; }
-        public string Name { get; set; }
-        public string FullName { get; set; }
-        public string ParentName { get; set; }
-        public string ParentId { get; set; }
+        public string CurrencyID { get; set; }
+        public string CurrencyName { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public string CurrencyCode { get; set; }
+        public string CurrencyFormat_ThousandSeparator { get; set; }
+        public string CurrencyFormat_ThousandSeparatorGrouping { get; set; }
+        public string CurrencyFormat_DecimalPlaces { get; set; }
+        public string CurrencyFormat_DecimalSeparator { get; set; }
+        public Nullable<bool> IsUserDefinedCurrency { get; set; }
+        public Nullable<double> ExchangeRate { get; set; }
+        public Nullable<System.DateTime> AsOfDate { get; set; }
+        public string EditSequence { get; set; }
         public Nullable<System.DateTime> TimeCreated { get; set; }
         public Nullable<System.DateTime> TimeModified { get; set; }
-        public string EditSequence { get; set; }
-        public Nullable<int> Sublevel { get; set; }
     }
 }

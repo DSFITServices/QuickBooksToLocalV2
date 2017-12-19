@@ -78,6 +78,9 @@
     <Compile Include="Models\addresstype.cs">
       <DependentUpon>qbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\currency.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\customer.cs">
       <DependentUpon>qbModel.tt</DependentUpon>
     </Compile>
@@ -104,6 +107,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>qbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\salesrep.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\salestaxcode.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\salestaxitem.cs">
+      <DependentUpon>qbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="QuickbooksDAL\CommonDAL\DBCommon.cs" />
     <Compile Include="Interfaces\IConnect.cs" />

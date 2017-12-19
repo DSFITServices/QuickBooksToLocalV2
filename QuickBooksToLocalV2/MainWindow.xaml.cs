@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using QuickBooksToLocalV2.QuickbooksDAL;
+using QuickBooksToLocalV2.Models;
 
 namespace QuickBooksToLocalV2
 {
@@ -24,13 +26,17 @@ namespace QuickBooksToLocalV2
         public MainWindow()
         {
             InitializeComponent();
+            synncquickbooksEntities qbct = new synncquickbooksEntities();
+
+            Dbcustomertype qbCtype = new Dbcustomertype(null,null);
+
+            ObservableCollection<customertype> CustomerTypes = qbCtype.DbRead();
+
+            qbct.customertypes.AddRange(CustomerTypes);
+            qbct.SaveChanges();
 
 
-            Dbcustomertype qbCtype = new Dbcustomertype();
-
-            qbCtype.DbRead(null,null);
-
-
+            
 
 
 

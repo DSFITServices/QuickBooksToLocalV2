@@ -14,7 +14,7 @@ namespace QuickBooksToLocalV2.Models
     
     public partial class addresstype
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
+        public int addtypeID { get; set; }
+        public string addtypeName { get; set; }
     }
 }
