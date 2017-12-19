@@ -9,8 +9,8 @@ namespace QuickBooksToLocalV2.Interfaces
 {
     public interface IConnect<T>
     {
-        T DbConnect(T obj);
+        void DbConnect(ref T obj);
 
-        bool DbClose(T obj);
+        bool DbClose(ref T obj);
     }
 }

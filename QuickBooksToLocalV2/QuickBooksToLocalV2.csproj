@@ -71,6 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Interfaces\IDBCurd.cs" />
     <Compile Include="Models\address.cs">
       <DependentUpon>qbModel.tt</DependentUpon>
     </Compile>
@@ -104,9 +105,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qbModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="QuickbooksDAL\CommonDAL\QBCommon.cs" />
+    <Compile Include="QuickbooksDAL\CommonDAL\DBCommon.cs" />
     <Compile Include="Interfaces\IConnect.cs" />
-    <Compile Include="QuickbooksDAL\Qbcustomertype.cs" />
+    <Compile Include="QuickbooksDAL\CommonDAL\DbConnection.cs" />
+    <Compile Include="QuickbooksDAL\Dbcustomertype.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -13,14 +13,12 @@ using QuickBooksToLocalV2.QuickbooksDAL.CommonDAL;
 
 namespace QuickBooksToLocalV2.QuickbooksDAL
 {
-    public class Qbcustomertype
+    public class Dbcustomertype : DBCommon , IDBCurd<customertype>
     {
 
 
-        public void dbRead(Nullable<DateTime> startDate, Nullable<DateTime> endDate)
+        public ObservableCollection<customertype> DbRead(Nullable<DateTime> startDate, Nullable<DateTime> endDate)
         {
-            bool sessionBegun = false;
-            bool connectionOpen = false;
             QBSessionManager sessionManager = null;
 
             try
@@ -93,7 +91,7 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
 
 
 
-                        if (CustomerTypeRet == null) return;
+                        if (CustomerTypeRet == null) return null;
 
                         //Go through all the elements of ICustomerTypeRetList
                         //Get value of ListID
@@ -140,13 +138,13 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
                         Customertypes.Add(Customertype);
                     }
                 }
+                DbClose(ref sessionManager);
+                return Customertypes;
 
+                //synncquickbooksEntities oContext = new synncquickbooksEntities();
 
-
-                synncquickbooksEntities oContext = new synncquickbooksEntities();
-
-                oContext.customertypes.AddRange(Customertypes);
-                oContext.SaveChanges();
+                //oContext.customertypes.AddRange(Customertypes);
+                //oContext.SaveChanges();
 
 
 
@@ -156,18 +154,12 @@ namespace QuickBooksToLocalV2.QuickbooksDAL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
+                DbClose(ref sessionManager);
+                return null;
             }
             finally
             {
-                //End the session and close the connection to QuickBooks
-                if (sessionBegun)
-                {
-                    sessionManager.EndSession();
-                }
-                if (connectionOpen)
-                {
-                    sessionManager.CloseConnection();
-                }
+                DbClose(ref sessionManager);
             }
 
 

@@ -26,9 +26,9 @@ namespace QuickBooksToLocalV2
             InitializeComponent();
 
 
-            Qbcustomertype qbCtype = new Qbcustomertype();
+            Dbcustomertype qbCtype = new Dbcustomertype();
 
-            qbCtype.dbRead(null,null);
+            qbCtype.DbRead(null,null);
 
 
 
